@@ -1,6 +1,66 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>lisakins</title>
+  <style>
+    h1 {
+      	text-align: center;
+      	color: red;
+    	}
+
+    img {
+      	display: block;
+      	margin-left: auto;
+      	margin-right: auto;
+    	}
+
+    .button {
+      	border: none;
+      	color: white;
+      	text-align: center;
+      	cursor: pointer;
+      	position: relative;
+      	width: 48px;
+      	height: 24px;
+    	}
+
+    .center {
+      	display: flex;
+     	justify-content: center;
+     	align-items: center;
+     	margin: 24px;
+	}
+
+    .yesButton {
+	background-color: #F8C8DC;
+	margin-right: 48px;
+	font-size: 24px;
+	}
+    .noButton {
+	background-color: #DC143C;
+	margin-left: 48px;	
+	font-size: 24px;
+	}
+  </style>
+	<script>
+		function change() {
+			var elem = document.getElementById("no");
+			if (elem.value=="No") elem.value = "Are you sure?";
+			else if (elem.value=="Are you sure?") elem.value = "Really sure?";
+			else if (elem.value=="Really sure?") elem.value = "I'm going to cry...";
+			else if (elem.value=="I'm going to cry...") elem.value = ":(";
+    			else elem.value = "No";
+		}
+	</script>
+</head>
 <body>
-  <h1>:((((((((((((((((((((((((((((((((<h1>
+
+<h1>Will you be my Valentine?</h1>
+  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRHuN92K6U5FH84_WgsOnUHM9uN6l6_Q3avTqJ9akxM4sFitL6f" style="width:50%;">
+  <div class="center">
+	<button class="yesButton" onclick="document.location='yes.html'" style="font-family:'Times New Roman'" id="yes">Yes</button>
+    	<button class="noButton" onclick="document.location='no.html'" style="font-family:'Times New Roman'" id="are you sure?">No</button>
+  </div>
+
 </body>
 </html>
